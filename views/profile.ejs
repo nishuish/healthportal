@@ -1,0 +1,65 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-offset-1 landing-caption">
+              <h1 class="title is-1 is-bold is-spaced">Profile</h1>
+              <h2 class="subtitle is-5">Hello there, <%= userName %> </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section">
+    <div class="container">
+      <div class="title-wrapper has-text-centered">
+        <h2 class="title is-2">Share information</h2>
+        <div class="divider is-centered"></div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+            <form action="/profile" method="post">
+
+                <div class="field">
+                    <label for="height">Height</label>
+                    <div class="control">
+                        <input type="text" class="input" name="height" placeholder="in cms">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="weight">Weight</label>
+                    <div class="control">
+                        <input type="text" class="input" name="weight" placeholder="in kgs">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="age">Age</label>
+                    <div class="control">
+                        <input type="text" class="input" name="age" placeholder="in yrs">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="bloodgrp">Blood Group</label>
+                    <div class="control">
+                        <input type="text" class="input" name="bloodgrp" >
+                    </div>
+                </div>
+
+        <div class="field">
+            <div class="control">
+                <button type="submit" class="button is-primary" name="button">Submit Details</button>
+            </div>
+        </div>
+    </form>
+        </div>
+    </div>
+    </div>
+</div>
+    </div>
+  </section>
+<%- include("partials/footer"); -%>

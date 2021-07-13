@@ -1,0 +1,65 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+<section class="hero is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-offset-1 landing-caption">
+          <h1 class="title is-1 is-bold is-spaced">Doctor Dashboard</h1>
+          <h2 class="subtitle is-5">Hello there, <%= userName %> </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section is-medium">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">Patient Status</h2>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns is-multiline is-align-items-stretch">
+        <%  members.forEach(function(member){ %>
+        <div class="column is-3">
+          <div class="box has-background-dark has-text-white">
+            <div class="has-text-centered">
+              <div class="icon-wrap is-icon-reveal">
+                <ion-icon name="person" size="large"></ion-icon>
+              </div>
+              <h4 class="is-size-3"><%=member.name %></h4>
+              <p class="content">Age: <%= member.age %></p>
+              <p class="content">Height: <%= member.height %></p>
+              <p class="content">Weight: <%= member.weight %></p>
+              <p class="content">Blood Group: <%= member.bloodgrp %></p>
+              <p class="content">
+                <span class="has-text-weight-bold">
+                  Preliminary diagnosis:
+                </span>
+                <br />
+                <%= member.disease %>
+              </p>
+              <p class="content">
+                <% if(member.status === "Threatened"){ %>
+                <span class="tag is-danger">Threatened</span>
+                <%}%>
+                 <% if(member.status !== "Threatened"){ %>
+                <span class="tag is-success">Safe</span>
+                <%}%>
+              </p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+
+    </div>
+  </div>
+  <div class="title-wrapper has-text-centered">
+    <button type="button" class="button is-primary" name="button"><a href="/doctor/diagnosis">Go to diagnois page</a></button>
+  </div>
+
+</section>
+
+<%- include("partials/footer"); -%>

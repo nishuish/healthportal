@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-offset-1 landing-caption">
+              <h1 class="title is-1 is-bold is-spaced">Profile</h1>
+              <h2 class="subtitle is-5">Hello there, <%= userName %> </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section">
+    <div class="container">
+      <div class="title-wrapper has-text-centered">
+        <h2 class="title is-2"><%= resString %> </h2>
+        <div class="divider is-centered"></div>
+      </div>
+    </div>
+    <div class="title-wrapper has-text-centered">
+      <button type="button" class="button is-primary" name="button"><a href="/patient/dashboard" color="White">Return to Dashboard</a></button>
+    </div>
+
+</section>
+
+<%- include("partials/footer"); -%>

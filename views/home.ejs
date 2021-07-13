@@ -1,0 +1,87 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+
+<section class="hero is-fullheight is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 landing-caption">
+          <h1 class="title is-1 is-bold is-spaced">Health Portal</h1>
+          <h2 class="subtitle is-4">
+            A Virtual Health Platform
+          </h2>
+          <div class="button-wrap">
+            <a class="button cta is-rounded primary-btn raised" href="/login">
+              Login
+            </a>
+            <a class="button cta is-rounded" href="/signup"> Signup </a>
+          </div>
+        </div>
+        <div class="column is-5">
+          <figure class="image is-4by3">
+            <img
+              src="/img/illustrations/worker.svg"
+              alt="Description"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-feature-grey is-medium">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">
+        Why <span class="has-text-primary">Health Portal</span>
+      </h2>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/family.jpg" alt="" width="100">
+            <h4 class="title is-size-4">Check up on Family</h4>
+            <p class="content">
+              Check your family members heath status
+            </p>
+          </div>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/x-ray.png" alt="" width="100">
+            <h4 class="title is-size-4">Share XRay</h4>
+            <p class="content">
+              Scan your X-Ray to verify whether you are Covid positive or not
+            </p>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/pharmacy.jpg" alt="" width="100">
+            <h4 class="title is-size-4">View nearby pharmacies</h4>
+            <p class="content">
+              Check your nearby Pharmacies
+            </p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/video-call.jpg" alt="" width="100">
+            <h4 class="title is-size-4">Chat with a doctor</h4>
+            <p class="content">
+              Still not got questions? Talk to our Doctors
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>

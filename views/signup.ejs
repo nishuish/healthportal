@@ -1,0 +1,80 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+<section
+  class="section is-medium has-background-image"
+  data-background="/img/login_bkg.png"
+  data-color="#4FC1EA"
+  data-color-opacity=".6"
+>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2 dark-text is-spaced">Patient Signup</h2>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns">
+        <div class="column is-6 is-offset-3">
+          <div class="box">
+            <form action="/signup" method="POST">
+              <div class="field">
+                <label for="name">Name</label>
+                <div class="control">
+                  <input type="text" class="input is-medium" name="name" placeholder="Enter Name">
+                </div>
+                <!-- {% if form.name.errors %}
+                {% for error in form.email.errors %}
+                  <p class="help is-danger">{{ error }}</small>
+                {% endfor %}
+                {% endif %} -->
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <div class="control">
+                  <input type="email" class="input is-medium" name="username" placeholder="Enter Email">
+                </div>
+                <!-- {% if form.email.errors %}
+                {% for error in form.email.errors %}
+                  <p class="help is-danger">{{ error }}</small>
+                {% endfor %}
+                {% endif %} -->
+              </div>
+              <div class="field">
+                <label for="password">Password</label>
+                <div class="control">
+                  <input type="password" class="input is-medium" name="password">
+                </div>
+                <!-- {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p class="help has-text-danger">{{ message }}</p>
+                {% endfor %}
+                </help>
+                {% endif %}
+                {% endwith %} -->
+              </div>
+              <div class="field">
+                <label for="confpassword">Confirm Password</label>
+                <div class="control">
+                  <input type="password" class="input is-medium" name="confpassword">
+                </div>
+                <!-- {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <p class="help has-text-danger">{{ message }}</p>
+                {% endfor %}
+                </help>
+                {% endif %}
+                {% endwith %} -->
+              </div>
+              <button type="submit" class="button secondary-btn is-rounded raised">SignUp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>

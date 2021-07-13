@@ -1,0 +1,45 @@
+<nav class="navbar is-default is-transparent is-fixed-top no-shadow" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold" href="/">
+                Health Portal
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu is-static">
+            <div class="navbar-end">
+                <% if(loggedIn && !doctor){ %>
+                <a href="/patient/dashboard" class="navbar-item is-secondary">
+                    Dashboard
+                </a>
+                <% } %>
+                <% if (loggedIn && doctor) { %>
+                  <a href="/doctor" class="navbar-item is-secondary">
+                      Dashboard
+                  </a>
+                <%}%>
+                <div class="navbar-item">
+                    <% if(loggedIn) { %>
+                    <a class="button signup-button rounded secondary-btn raised" href="/logout">
+                        Logout
+                    </a>
+                    <% } %>
+                    <% if(!loggedIn) { %>
+                    <a class="button signup-button rounded secondary-btn raised" href="/login">
+                        Login
+                    </a>
+                    <a class="button signup-button rounded primary-btn raised" href="/signup">
+                        Sign up
+                    </a>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

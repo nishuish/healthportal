@@ -1,0 +1,119 @@
+<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-offset-1 landing-caption">
+          <h1 class="title is-1 is-bold is-spaced">Patient Dashboard</h1>
+          <h2 class="subtitle is-5">Hello there, <%= userName %> </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-feature-grey">
+  <div class="container">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">Services</h2>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/family.jpg" alt="" width="100">
+            <h4 class="title is-size-4">Check up on Family</h4>
+            <p class="content">
+              Check your family members heath status
+            </p>
+            <a href="/patient/family" class="button btn-align-md primary-btn raised"
+            >Go to Family</a
+            >
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/x-ray.png" alt="" width="100">
+            <h4 class="title is-size-4">Share XRay</h4>
+            <p class="content">
+              Scan your X-Ray to verify whether you are Covid positive or not
+            </p>
+            <form method="POST" action="/patient/dashboard" enctype="multipart/form-data">
+              <div>
+                <label>Select your picture:</label>
+                <input type="file" name="xray_pic" class="" />
+              </div>
+              <div>
+                <input type="submit" name="btn_upload_profile_pic" value="Upload" />
+              </div>
+            </form>
+            <!-- <form method="POST" action="/patient/dashboard" enctype="multipart/form-data" class="img-upload">
+              <div class="file is-justify-content-center m-4">
+                <label class="file-label">
+                  <input class="file-input" id="picture" name="picture" required="" type="file">
+                  <span class="file-cta">
+                    <span class="file-label">
+                      Upload file
+                    </span>
+                  </span>
+                </label>
+                <button type="submit" class="file-input" name="submit_img">Submit</button>
+              </div>
+            </form> -->
+            <!-- <p class="content">
+              {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              {% for message in messages %}
+              <p class="help has-text-danger">{{ message }}</p>
+              {% endfor %}
+            </help>
+            {% endif %}
+            {% endwith %}
+          </p> -->
+        </div>
+      </div>
+      <!-- <div class="column is-one-third">
+        <div class="box is-bordered has-text-centered is-feature-reveal">
+          <img src="/img/logos/chatbot.png" alt="" width="100">
+          <h4 class="title is-size-4">Diagnosis Bot</h4>
+          <p class="content">
+            Talk to our state-of-the art chatbot
+          </p>
+          <a href="https://chatbot.hellotars.com/conv/41BcE1/" class="button btn-align-md primary-btn raised" target="_blank"
+          >Launch bot</a
+          >
+        </div>
+      </div> -->
+      <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/pharmacy.jpg" alt="" width="100">
+            <h4 class="title is-size-4">View nearby pharmacies</h4>
+            <p class="content">
+              Check your nearby Pharmacies
+            </p>
+            <a href="/pharmacy" class="button btn-align-md primary-btn raised"
+            >View pharmacy</a
+            >
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="box is-bordered has-text-centered is-feature-reveal">
+            <img src="/img/logos/video-call.jpg" alt="" width="100">
+            <h4 class="title is-size-4">Chat with a doctor</h4>
+            <p class="content">
+              Still not got questions? Talk to our Doctors
+            </p>
+            <a href="https://videocalldoc112.herokuapp.com/" class="button btn-align-md primary-btn raised" target="_blank"
+              >Contact doctor</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("partials/footer"); -%>
